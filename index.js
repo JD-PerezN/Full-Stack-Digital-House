@@ -56,3 +56,4 @@ function laClaveSecreta(arr) {
 }
 
 console.log(laClaveSecreta([ "s", "*", "e", "n", "u", "l", " ", "s", "*", "e", " ", "a", "í", "*", "d", " ", "l", "*", "E", "*"]))
+//Ahora si
