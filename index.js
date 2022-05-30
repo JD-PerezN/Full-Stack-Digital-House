@@ -1,3 +1,5 @@
+// EJERCICIOS 
+
 function alturaArbolUtopico(n) {
     let i = 1
     let res = 1
@@ -56,4 +58,3 @@ function laClaveSecreta(arr) {
 }
 
 console.log(laClaveSecreta([ "s", "*", "e", "n", "u", "l", " ", "s", "*", "e", " ", "a", "í", "*", "d", " ", "l", "*", "E", "*"]))
-//Ahora si
