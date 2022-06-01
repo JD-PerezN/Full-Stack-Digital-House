@@ -1,0 +1,22 @@
+[
+    {
+        "titulo": "Estudiar JS",
+        "estado": "en progreso"
+    },
+    {
+        "titulo": "Estudiar Python",
+        "estado": "en progreso"
+    },
+    {
+        "titulo": "Programar la app de notas",
+        "estado": "en progreso"
+    },
+    {
+        "titulo": "Jugar futbol",
+        "estado": "pendiente"
+    },
+    {
+        "titulo": "Clases teoricas de moto",
+        "estado": "terminada"
+    }
+]

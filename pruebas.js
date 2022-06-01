@@ -28,4 +28,30 @@ let trabajar = dia => {
     }
 }
 
-console.log(trabajar("I"));
+//console.log(trabajar("I"));
+
+let fruta = "Naranja" 
+
+let cond = fruta == "Manzana" ? "Me gustan las manzanas": "Queria manzana"
+
+//console.log(cond);
+
+let semaforo = "Violeta"
+
+switch (semaforo) {
+    case ("Verde"):
+        console.log("Puede seguir");
+    break
+
+    case ("Amarillo"):
+        console.log("Detenerse");
+    break
+
+    case ("Rojo"):
+        console.log("No avanzar");
+    break
+
+    default:
+        console.log("Color inexistente");
+    break
+}
