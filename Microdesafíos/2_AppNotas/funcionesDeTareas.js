@@ -4,33 +4,43 @@ const FS = require("fs")
 let archivoTareas = {
     archivo: "./tareas.json",
     leerArchivo: function() {
-        let tareasJSON = FS.readFileSync(this.archivo)
+        let tareasJSON = FS.readFileSync(this.archivo, "utf-8")
         return (JSON.parse(tareasJSON))
+    },
+    // Función pendiente
+    escribirJSON: function(arr) {
+        let nuevasJSON = JSON.stringify(arr)
+        return (FS.writeFileSync(this.archivo, nuevasJSON))
+    },
+    guardarTarea: function () {
+        
     }
 }
 
-let funcionTareas = accion => {
-    let tareas = archivoTareas.leerArchivo()
-    
-    let i = 0
-    let array = []
+const tareas = archivoTareas.leerArchivo()
+const accion = process.argv[2]
 
+let listarTareas = () => {
     switch(accion) {
         case("listar"):
-            for(i; i <= (Object.entries(tareas).length - 1); i++) {
-                array.push(`${i + 1}. ${tareas[i].titulo} - ${tareas[i].estado}\n`)
-            }
-            return (`\nListado de tareas \n------------------ \n${array.join("")}-------------------`)
+            console.log('\nListado de tareas');
+            console.log('------------------');
+    
+            tareas.forEach((elemento, i) => {
+                console.log(`${i + 1}. ${elemento.titulo} --> ${elemento.estado}`)
+            })
+            
+            console.log()
             break
             
-        case(""):
-            return ("Atención - Tienes que pasar una acción.")
+        case undefined:
+            console.log("Atención - Tienes que pasar una acción.")
             break
         
         default:
-            return ("No entiendo qué quieres hacer.")
+            console.log("No entiendo qué quieres hacer.")
     }
 }
 
 // Exportación del módulo local
-module.exports = funcionTareas
+module.exports = listarTareas

@@ -1,9 +1,9 @@
 // MÓDULOS EXPORTADOS
-const FUNCIONTAREAS = require("./funcionesDeTareas.js")
+const listarTareas = require("./funcionesDeTareas.js")
 
 // VARIABLES
-let accion = process.argv[2]
+listarTareas()
 
-console.log(FUNCIONTAREAS(accion))
+    
 
-//console.log(Object.entries(tareas).length)
+
