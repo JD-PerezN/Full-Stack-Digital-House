@@ -16,6 +16,13 @@ let archivoTareas = {
         let tarea = this.leerArchivo()
         tarea.push(arr)
         this.escribirJSON(tarea)
+    },
+    filtrarPorEstado: function (estado) {
+        let tareas = this.leerArchivo()
+        let arrFiltrado = tareas.filter(function (elemento) {
+            return (elemento.estado == estado)
+        })
+        return (arrFiltrado)
     }
 }
 
@@ -36,9 +43,33 @@ let listarTareas = () => {
             break
 
         case("crear"):
-            archivoTareas.guardarTarea
+            let nombreTarea = {
+                    titulo: process.argv[3],
+                    estado: "pendiente"
+                }
+            archivoTareas.guardarTarea(nombreTarea)
+
+            console.log(`\nNueva tarea creada`);
+            console.log('------------------');
+            console.log(`${nombreTarea.titulo} --> ${nombreTarea.estado}`)
+
+            console.log();
             break
+        
+        case ("filtrar"):
+            let estado = process.argv[3]
+            let arrFiltrado = archivoTareas.filtrarPorEstado(estado)
+
+            console.log(`\nListado de tareas por estado ${estado}`);
+            console.log('------------------');
+    
+            arrFiltrado.forEach((elemento, i) => {
+                console.log(`${i + 1}. ${elemento.titulo} --> ${elemento.estado}`)
+            })
             
+            console.log()
+            break
+
         case undefined:
             console.log("Atención - Tienes que pasar una acción.")
             break
@@ -49,5 +80,5 @@ let listarTareas = () => {
 }
 
 // Exportación del módulo local
-//module.exports = listarTareas
-module.exports = archivoTareas
+module.exports = listarTareas
+//module.exports = archivoTareas
