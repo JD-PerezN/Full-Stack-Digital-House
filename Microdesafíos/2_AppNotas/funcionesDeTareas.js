@@ -10,10 +10,12 @@ let archivoTareas = {
     // Función pendiente
     escribirJSON: function(arr) {
         let nuevasJSON = JSON.stringify(arr)
-        return (FS.writeFileSync(this.archivo, nuevasJSON))
+        FS.writeFileSync(this.archivo, nuevasJSON)
     },
-    guardarTarea: function () {
-        
+    guardarTarea: function (arr) {
+        let tarea = this.leerArchivo()
+        tarea.push(arr)
+        this.escribirJSON(tarea)
     }
 }
 
@@ -32,6 +34,10 @@ let listarTareas = () => {
             
             console.log()
             break
+
+        case("crear"):
+            archivoTareas.guardarTarea
+            break
             
         case undefined:
             console.log("Atención - Tienes que pasar una acción.")
@@ -43,4 +49,5 @@ let listarTareas = () => {
 }
 
 // Exportación del módulo local
-module.exports = listarTareas
+//module.exports = listarTareas
+module.exports = archivoTareas
