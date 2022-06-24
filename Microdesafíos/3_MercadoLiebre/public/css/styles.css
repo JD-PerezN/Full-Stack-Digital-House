@@ -1,0 +1,45 @@
+header {
+    background-color: #EAC926;;
+    font-family: 'Roboto', sans-serif;
+}
+
+header p {
+    font-size: 12px;
+}
+
+h3 {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.burguer-menu {
+    background-color: #03264C;
+    text-align: center;
+}
+
+/*
+SELECTOR DE CLASE
+*/
+.parrafo-destacado {
+    color: purple;
+    font-style: italic;
+    font-size: 30px;
+}
+
+/* SELECTOR DESCENDENTE
+Se lee de atrás hacia adelante (todos los strong que se encuentre en un h2)
+*/
+h2 strong {
+    color: green;
+    background-color: blanchedalmond;
+}
+
+.parrafo-destacado em {
+    text-transform: uppercase;
+    background-color: aqua;
+}
+
+strong {
+    font-size: 30px;
+    font-style: italic;
+}
+
