@@ -4,13 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Etiqueta para diseño responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mercado Liebre</title>
     <!-- LINKS CON LAS HOJAS DE ESTILO DEL PROYECTO -->
+    <!-- Fuente Roboto-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!-- Íconos -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/e772c9ea48.js" crossorigin="anonymous"></script>
+    <!-- Archivos propios -->
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/styles.css"> <!-- Vincular con el archivo css principal (VINCULAR AL FINAL)-->
 </head>
@@ -20,115 +25,149 @@
     <!-- Etiqueta header -->
     <header>
         <img src="/images/logo-mercado-liebre.svg" alt="">
-        <section>
-            <input type="search"> <!-- Etiqueta para la barra de búsqueda -->
-        </section>
-        <p>Comprá en cuotas y sin tarjeta de crédito</p>
-        <div class="burger-menu">
-            <i class="fas fa-bars"></i>
-        </div>
-
-        <nav> <!-- Etiqueta para representar una sección cuyo propósito es brindar links de navegación -->
-            <ul>
+        <!-- Etiqueta para input del usuario (Debe poseer una acción la cual es al botón) -->
+        <form>
+            <!-- Etiqueta para la barra de búsqueda -->
+            <input type="text" placeholder="Buscar productos, marcas...">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+        <p class="header-centrado"><i class="fa-solid fa-hand-holding-dollar"></i>Comprá en cuotas y sin tarjeta de
+            crédito</p>
+        <nav>
+            <!-- Etiqueta para representar una sección cuyo propósito es brindar links de navegación -->
+            <ul class="ul-no-bullets">
                 <li><a href="#">Ofertas</a></li>
                 <li><a href="#">Tiendas Oficiales</a></li>
                 <li><a href="#">Vender</a></li>
                 <li><a href="#">Ayuda</a></li>
             </ul>
-            <ul>
-                <li><a href="/register">Creá tu cuenta
-                        <!--iconito de registro-->
-                    </a></li>
-                <li><a href="/login">Ingresá
-                        <!--iconito de ingreso-->
-                    </a></li>
-                <li><a href="#">Mis compras
-                        <!--iconito de canasta-->
-                    </a></li>
+            <ul class="ul-no-bullets">
+                <li><a href="/register">Creá tu cuenta </a><i class="fa-solid fa-id-card"></i></li>
+                <li><a href="/login">Ingresá </a><i class="fa-solid fa-right-to-bracket"></i></li>
+                <li><a href="#"></i>Mis compras </a><i class="fa-solid fa-basket-shopping"></i></li>
             </ul>
-        </nav>        
+        </nav>
+        <div>
+            <button class="burger-menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
     </header>
     <section>
-        <img src="/images/img-home-banner.jpg" alt="">
+        <img src="/images/img-home-banner.jpg" width=100% alt="">
     </section>
+
     <!-- Etiqueta main -->
     <main>
         <section>
             <h3>Basado en tu última visita</h3>
             <article>
-                <img src="/images/img-cafetera-moulinex.jpg" alt="">
-                <p>$6.770</p>
-                <p>40% OFF</p>
-                <h4>Cafetera Moulinex</h4>
-            </article>        
+                <div class="imagen">
+                    <img src="/images/img-cafetera-moulinex.jpg" alt="">
+                </div>
+                
+                <div class="main-div-productos">
+                    <i class="fa-solid fa-truck-fast"></i>
+                    <p class="main-precios">$6.770</p>
+                    <p class="main-descuento">40% OFF</p>
+                    <h4 class="main-descripciones">Cafetera Moulinex</h4>
+                </div>
+            </article>
 
             <article>
                 <img src="/images/img-macbook-pro-2019.jpg" alt="">
-                <p>$230.000</p>
-                <p>20% OFF</p>
-                <h4>MacBook Pro 2019</h4>
+                <div class="main-div-productos">
+                    <i class="fa-solid fa-truck-fast"></i>
+                    <p class="main-precios">$230.000</p>
+                    <p class="main-descuento">20% OFF</p>
+                    <h4 class="main-descripciones">MacBook Pro 2019</h4>
+                </div>
             </article>
-            
+
             <article>
                 <img src="/images/img-samsung-galaxy-s10.jpg" alt="">
-                <p>$70.500</p>
-                <p>10% OFF</p>
-                <h4>Samsung Galaxy S10</h4>
+                <div class="main-div-productos">
+                    <i class="fa-solid fa-truck-fast"></i>
+                    <p class="main-precios">$70.500</p>
+                    <p class="main-descuento">10% OFF</p>
+                    <h4 class="main-descripciones">Samsung Galaxy S10</h4>
+                </div>              
             </article>
-            
+
             <article>
                 <img src="/images/img-tv-samsung-smart.jpg" alt="">
-                <p>$23.200</p>
-                <p>5% OFF</p>
-                <h4>SmartTv Samsung 43"</h4>
+                <div class="main-div-productos">
+                    <i class="fa-solid fa-truck-fast"></i>
+                    <p class="main-precios">$23.200</p>
+                    <p class="main-descuento">5% OFF</p>
+                    <h4 class="main-descripciones">SmartTv Samsung 43"</h4>
+                </div>               
             </article>
-            
+
         </section>
         <section>
             <h3>Sección de ofertas</h3>
             <article>
                 <img src="/images/img-cafetera-moulinex.jpg" alt="">
-                <p>$6.770</p>
-                <p>40% OFF</p>
-                <h4>Cafetera Moulinex</h4>
-            </article>        
+                <div class="main-div-productos">
+                    <i class="fa-solid fa-truck-fast"></i>
+                    <p class="main-precios">$6.770</p>
+                    <p class="main-descuento">40% OFF</p>
+                    <h4 class="main-descripciones">Cafetera Moulinex</h4>
+                </div>
+                
+            </article>
 
             <article>
                 <img src="/images/img-macbook-pro-2019.jpg" alt="">
-                <p>$230.000</p>
-                <p>20% OFF</p>
-                <h4>MacBook Pro 2019</h4>
+                <div class="main-div-productos">
+                    <i class="fa-solid fa-truck-fast"></i>
+                    <p class="main-precios">$230.000</p>
+                    <p class="main-descuento">20% OFF</p>
+                    <h4 class="main-descripciones">MacBook Pro 2019</h4>
+                </div>
             </article>
-            
+
             <article>
                 <img src="/images/img-samsung-galaxy-s10.jpg" alt="">
-                <p>$70.500</p>
-                <p>10% OFF</p>
-                <h4>Samsung Galaxy S10</h4>
+                <div class="main-div-productos">
+                    <i class="fa-solid fa-truck-fast"></i>
+                    <p class="main-precios">$70.500</p>
+                    <p class="main-descuento">10% OFF</p>
+                    <h4 class="main-descripciones">Samsung Galaxy S10</h4>
+                </div>              
             </article>
-            
+
             <article>
                 <img src="/images/img-tv-samsung-smart.jpg" alt="">
-                <p>$23.200</p>
-                <p>5% OFF</p>
-                <h4>SmartTv Samsung 43"</h4>
+                <div class="main-div-productos">
+                    <i class="fa-solid fa-truck-fast"></i>
+                    <p class="main-precios">$23.200</p>
+                    <p class="main-descuento">5% OFF</p>
+                    <h4 class="main-descripciones">SmartTv Samsung 43"</h4>
+                </div>               
             </article>
         </section>
     </main>
     <!-- Etiqueta footer -->
     <footer>
         <section>
+            <i class="fa-solid fa-credit-card"></i>
             <h4>Pagá con tarjeta o en efectivo</h4>
-            <p>Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en puntos de pago. ¡Y siempre es seguro!</p>
+            <p>Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en puntos de pago. ¡Y siempre es
+                seguro!</p>
 
+            <i class="fa-solid fa-gift"></i>
             <h4>Envío gratis desde $ 2.500</h4>
-            <p>Solo por estar resgistrado en Mercado Liebre tenés envíos gratis en miles de productos. Es un beneficio de Mercado Puntos</p>
+            <p>Solo por estar resgistrado en Mercado Liebre tenés envíos gratis en miles de productos. Es un beneficio
+                de Mercado Puntos</p>
 
+            <i class="fa-solid fa-user-shield"></i>
             <h4>Seguridad de principio a fin</h4>
-            <p>¿No te gusta? ¡Devolvélo! En Mercado Liebre, no hay nada que no puedas hacer, Porque estás siempre protegido</p>
-
-            <h4>Copyright © 1999-2020 MercadoLiebre S.R.L.</h4>
+            <p>¿No te gusta? ¡Devolvélo! En Mercado Liebre, no hay nada que no puedas hacer, Porque estás siempre
+                protegido</p>
         </section>
+        <h4>Copyright © 1999-2020 MercadoLiebre S.R.L.</h4>
     </footer>
 </body>
 </html>

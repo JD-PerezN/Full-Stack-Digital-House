@@ -1,20 +1,105 @@
-header {
-    background-color: #EAC926;;
-    font-family: 'Roboto', sans-serif;
+/* ESTILOS QUE APLICAN PARA TODO EL DOCUMENTO */
+html {
+    font-family: 'Roboto' !important;
+} 
+
+* {
+    box-sizing: border-box;
 }
 
+/* ESTILOS PARA IMÁGENES */
+img {
+    width: 100%;
+}
+
+.imagen {
+    background-color: #fff;
+}
+
+/* ESTILOS PARA EL HEADER */
+header {
+    background-color: #EAC926;;
+}
+
+header nav {
+    display: none;
+}
+
+/* etiqueta p que debe ir centrada */
+.header-centrado {
+    text-align: center;
+}
+
+/* Menú de navegación sin adornos */
+.ul-no-bullets {
+    list-style-type: none;
+}
+
+/* Texto del menú de navegación sin adornos */
+.ul-no-bullets li a {
+    text-decoration: none;
+}
+
+/* Párrafos en general */
 header p {
     font-size: 12px;
 }
 
-h3 {
-    font-family: 'Courier New', Courier, monospace;
-}
-
-.burguer-menu {
-    background-color: #03264C;
+header div {
     text-align: center;
 }
+
+.burger-menu {
+    color: white;
+    background-color: #03264C;
+    margin-bottom: 10px;
+    font-size: 2em;
+}
+
+/* ESTILOS PARA LA SECCION MAIN */
+main {
+    background-color: #ebebeb;
+    margin: auto;
+    width: 90%;
+}
+
+main h3 {
+    font-size: 24px;
+}
+
+.main-precios {
+    font-size: 18px;
+    color: #39b54a;
+}
+
+.main-descuentos {
+    font-size: 16px;
+}
+
+.main-descripciones {
+    display: none;
+}
+
+main article {
+    padding: 5px;
+}
+
+.main-div-productos {
+    padding: 15px;
+    background-color: white;
+    border-top: solid 1px #ebebeb;
+}
+
+footer section {
+    text-align: center;
+}
+
+footer i {
+    color: #03264C;
+    font-size: 2em;
+    margin-top: 10px;
+}
+
 
 /*
 SELECTOR DE CLASE
@@ -43,3 +128,25 @@ strong {
     font-style: italic;
 }
 
+/* MEDIA QUERIES */
+/* Navegación en tablets */
+@media(min-width: 361px) {
+    header nav {
+        display: initial;
+    }
+
+    .main-descripciones {
+        display: initial;
+    }
+}
+
+/* Navegación en desktop */
+@media(min-width: 769px) {
+    header nav {
+        display: initial;
+    }
+
+    .main-descripciones {
+        display: initial;
+    }
+}
